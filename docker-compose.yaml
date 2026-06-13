@@ -19,7 +19,7 @@ services:
     volumes:
       - ${PLUME_DATA_PATH:-./data}:/var/www/html/data
       - ${PLUME_THEME_PATH:-./themes}:/var/www/html/themes
-      - ${PLUME_CACHE_VOLUME:-plume-cache}:/var/www/html/cache
+      - ${PLUME_CACHE_VOLUME:-plume-cache}:/var/www/html/cache/app
       - /etc/localtime:/etc/localtime:ro
     profiles: [cli]
     entrypoint: php plume
