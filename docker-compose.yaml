@@ -5,7 +5,7 @@ services:
     env_file: environment.d/plume.env
     ports:
       - ${PLUME_PORT:-8076}:80
-    volumes:
+    volumes: &volumes
       - ${PLUME_DATA_PATH:-./data}:/var/www/html/data
       - ${PLUME_THEME_PATH:-./themes}:/var/www/html/themes
       - ${PLUME_CACHE_VOLUME:-plume-cache}:/var/www/html/cache/app
@@ -16,11 +16,7 @@ services:
     image: phlak/plume:${PLUME_VERSION:-latest}
     user: www-data:www-data
     env_file: environment.d/plume.env
-    volumes:
-      - ${PLUME_DATA_PATH:-./data}:/var/www/html/data
-      - ${PLUME_THEME_PATH:-./themes}:/var/www/html/themes
-      - ${PLUME_CACHE_VOLUME:-plume-cache}:/var/www/html/cache/app
-      - /etc/localtime:/etc/localtime:ro
+    volumes: *volumes
     profiles: [cli]
     entrypoint: php plume
     restart: never
