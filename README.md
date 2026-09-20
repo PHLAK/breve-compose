@@ -28,7 +28,7 @@ Configuration
 -------------
 
 Your Plume installation can be configured by adding environment variables to the
-`environment.d/plume.env` file. See the [Plume Documentation](https://docs.plume.pub)
+`environment.d/plume.env` file. See the [Documentation](https://docs.plume.pub)
 for the list of available environment variables and what they do.
 
 > [!IMPORTANT]
