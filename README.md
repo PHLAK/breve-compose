@@ -10,7 +10,7 @@ Installation
 
   1. Clone the repository
 
-         git clone https://github.com/PHLAK/plume-compose.git
+         git clone https://github.com/PHLAK/breve-compose.git
 
   2. Initialize the configuration files
 
@@ -27,10 +27,10 @@ Installation
 Configuration
 -------------
 
-Your Plume installation can be configured by adding environment variables to the
-`environment.d/plume.env` file. See the [Documentation](https://docs.plume.pub)
+Your Breve installation can be configured by adding environment variables to the
+`environment.d/breve.env` file. See the [Documentation](https://docs.breve.blog)
 for the list of available environment variables and what they do.
 
 > [!IMPORTANT]
-> After modifying `environment.d/plume.env` you must restart your containers
+> After modifying `environment.d/breve.env` you must restart your containers
 > (i.e. `docker compose up -d`) for the changes to apply.

@@ -1,14 +1,14 @@
 services:
 
-  plume:
-    image: phlak/plume:${PLUME_VERSION:-latest}
-    env_file: environment.d/plume.env
+  breve:
+    image: phlak/breve:${BREVE_VERSION:-latest}
+    env_file: environment.d/breve.env
     ports:
-      - ${PLUME_PORT:-8076}:80
+      - ${BREVE_PORT:-8076}:80
     volumes:
-      - ${PLUME_DATA_PATH:-./data}:/var/www/html/data
-      - ${PLUME_THEME_PATH:-./themes}:/var/www/html/themes
-      - ${PLUME_CACHE_VOLUME:-plume-cache}:/var/www/html/cache/app
+      - ${BREVE_DATA_PATH:-./data}:/var/www/html/data
+      - ${BREVE_THEME_PATH:-./themes}:/var/www/html/themes
+      - ${BREVE_CACHE_VOLUME:-breve-cache}:/var/www/html/cache/app
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
 
@@ -25,4 +25,4 @@ services:
     restart: unless-stopped
 
 volumes:
-  plume-cache: {}
+  breve-cache: {}
