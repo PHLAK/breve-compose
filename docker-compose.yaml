@@ -3,6 +3,7 @@ services:
   breve:
     image: phlak/breve:${BREVE_VERSION:-latest}
     env_file: environment.d/breve.env
+    user: ${HOST_USER_ID:-www-data}:${HOST_GROUP_ID:-www-data}
     ports:
       - ${BREVE_PORT:-8076}:80
     volumes:
